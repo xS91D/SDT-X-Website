@@ -1,0 +1,345 @@
+﻿/*
+Theme: MDo
+Author: ohmyga
+WebSite: https://ohmyga.net/
+*/
+
+#mcname-footer {
+    padding: 20px;
+ }
+
+.mcname-main {
+    padding: 1px;
+    width: 100%;
+    height: 100%;
+ }
+ 
+.mcname-menu-img {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-position: center center;
+    background-size: cover;
+}
+
+.mcname-username {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 20px;
+    color: #fff;
+    font-size: 17px;
+}
+
+.mcname-info{
+    color: hsla(0,0%,100%,.7);
+    font-size: 13px;
+}
+
+.mcname-logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 65px;
+    background-position: center center;
+    background-size: cover;
+}
+
+#menu {
+    background: rgba(255, 255, 255, 0.8);
+    font-size: 50px;
+    color:#000;
+}
+
+body{ 
+    background-image: url(../images/bg.jpg); 
+	background-size: cover; 
+	background-position: 50% 50%; 
+	background-attachment: fixed; 
+	background-repeat: no-repeat; 
+} 
+
+.mcname-header{ 
+    background-color:rgba(0, 0, 0, 0);
+	color: #000; 
+}
+
+.mdui-card{ 
+    background-color:rgba(255, 255, 255, 0.6);
+}
+
+.mcname-top{ 
+    background-color:rgba(233, 30, 99, 0.5);
+}
+
+.mcname-small-title{
+	color: #000000; 
+	background: rgba(255, 255, 255, 0); 
+	border-left: 5px solid #1E88E5; 
+	cursor: default; 
+	text-transform: none; 
+	text-overflow: ellipsis; 
+}
+
+.mcname-small-title:hover{ 
+    background: rgba(255, 255, 255, 0.1); 
+} 
+
+.mcname-small-title:active{ 
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* 大标题动画 */
+@keyframes mcname-animation-title {  
+    0% {opacity: 0;}/*初始状态 透明度为0*/  
+	10% {opacity: 0.1;}/*过渡状态 透明度为0.1*/ 
+    20% {opacity: 0.2;}/*过渡状态 透明度为0.2*/  
+	30% {opacity: 0.3;}/*过渡状态 透明度为0.3*/ 
+	40% {opacity: 0.4;}/*过渡状态 透明度为0.4*/
+    50% {opacity: 0.5;}/*过渡状态 透明度为0.5*/ 	
+	60% {opacity: 0.6;}/*过渡状态 透明度为0.6*/
+	70% {opacity: 0.7;}/*过渡状态 透明度为0.7*/ 
+    80% {opacity: 0.8;}/*过渡状态 透明度为0.8*/
+    90% {opacity: 0.9;}/*过渡状态 透明度为0.9*/   	
+    100% {opacity: 1;}/*结束状态 透明度为1*/   
+}
+
+@-webkit-keyframes mcname-animation-title {/*针对webkit内核*/  
+    0% {opacity: 0;}/*初始状态 透明度为0*/  
+	10% {opacity: 0.1;}/*过渡状态 透明度为0.1*/ 
+    20% {opacity: 0.2;}/*过渡状态 透明度为0.2*/  
+	30% {opacity: 0.3;}/*过渡状态 透明度为0.3*/ 
+	40% {opacity: 0.4;}/*过渡状态 透明度为0.4*/
+    50% {opacity: 0.5;}/*过渡状态 透明度为0.5*/ 	
+	60% {opacity: 0.6;}/*过渡状态 透明度为0.6*/
+	70% {opacity: 0.7;}/*过渡状态 透明度为0.7*/ 
+    80% {opacity: 0.8;}/*过渡状态 透明度为0.8*/
+    90% {opacity: 0.9;}/*过渡状态 透明度为0.9*/   	
+    100% {opacity: 1;}/*结束状态 透明度为1*/ 
+}  
+
+.mcname-animation-title {    
+    animation: mcname-animation-title;/*动画名称*/  
+    animation-duration: 0.2s;/*动画持续时间*/  
+    -webkit-animation:mcname-animation-title 0.2s;/*针对webkit内核*/  
+}
+/* 大标题动画结束 */
+
+/* Card公告动画 */
+@keyframes mcname-animation-card-gg {  
+    0% {opacity: 0;}/*初始状态 透明度为0*/  
+	10% {opacity: 0.1;}/*过渡状态 透明度为0.1*/ 
+    20% {opacity: 0.2;}/*过渡状态 透明度为0.2*/  
+	30% {opacity: 0.3;}/*过渡状态 透明度为0.3*/ 
+	40% {opacity: 0.4;}/*过渡状态 透明度为0.4*/
+    50% {opacity: 0.5;}/*过渡状态 透明度为0.5*/ 	
+	60% {opacity: 0.6;}/*过渡状态 透明度为0.6*/
+	70% {opacity: 0.7;}/*过渡状态 透明度为0.7*/ 
+    80% {opacity: 0.8;}/*过渡状态 透明度为0.8*/
+    90% {opacity: 0.9;}/*过渡状态 透明度为0.9*/   	
+    100% {opacity: 1;}/*结束状态 透明度为1*/  
+}
+
+@-webkit-keyframes mcname-animation-card-gg {/*针对webkit内核*/  
+    0% {opacity: 0;}/*初始状态 透明度为0*/  
+	10% {opacity: 0.1;}/*过渡状态 透明度为0.1*/ 
+    20% {opacity: 0.2;}/*过渡状态 透明度为0.2*/  
+	30% {opacity: 0.3;}/*过渡状态 透明度为0.3*/ 
+	40% {opacity: 0.4;}/*过渡状态 透明度为0.4*/
+    50% {opacity: 0.5;}/*过渡状态 透明度为0.5*/ 	
+	60% {opacity: 0.6;}/*过渡状态 透明度为0.6*/
+	70% {opacity: 0.7;}/*过渡状态 透明度为0.7*/ 
+    80% {opacity: 0.8;}/*过渡状态 透明度为0.8*/
+    90% {opacity: 0.9;}/*过渡状态 透明度为0.9*/   	
+    100% {opacity: 1;}/*结束状态 透明度为1*/ 
+}  
+
+.mcname-animation-card-gg {    
+    animation: mcname-animation-card-gg;/*动画名称*/  
+    animation-duration: 0.4s;/*动画持续时间*/  
+    -webkit-animation:mcname-animation-card-gg 0.4s;/*针对webkit内核*/  
+}
+/* Card公告动画动画结束 */
+
+/* Car1告动画 */
+@keyframes mcname-animation-card-1 {  
+    0% {opacity: 0;}/*初始状态 透明度为0*/  
+	10% {opacity: 0.1;}/*过渡状态 透明度为0.1*/ 
+    20% {opacity: 0.2;}/*过渡状态 透明度为0.2*/  
+	30% {opacity: 0.3;}/*过渡状态 透明度为0.3*/ 
+	40% {opacity: 0.4;}/*过渡状态 透明度为0.4*/
+    50% {opacity: 0.5;}/*过渡状态 透明度为0.5*/ 	
+	60% {opacity: 0.6;}/*过渡状态 透明度为0.6*/
+	70% {opacity: 0.7;}/*过渡状态 透明度为0.7*/ 
+    80% {opacity: 0.8;}/*过渡状态 透明度为0.8*/
+    90% {opacity: 0.9;}/*过渡状态 透明度为0.9*/   	
+    100% {opacity: 1;}/*结束状态 透明度为1*/ 
+}
+
+@-webkit-keyframes mcname-animation-card-1 {/*针对webkit内核*/  
+    0% {opacity: 0;}/*初始状态 透明度为0*/  
+	10% {opacity: 0.1;}/*过渡状态 透明度为0.1*/ 
+    20% {opacity: 0.2;}/*过渡状态 透明度为0.2*/  
+	30% {opacity: 0.3;}/*过渡状态 透明度为0.3*/ 
+	40% {opacity: 0.4;}/*过渡状态 透明度为0.4*/
+    50% {opacity: 0.5;}/*过渡状态 透明度为0.5*/ 	
+	60% {opacity: 0.6;}/*过渡状态 透明度为0.6*/
+	70% {opacity: 0.7;}/*过渡状态 透明度为0.7*/ 
+    80% {opacity: 0.8;}/*过渡状态 透明度为0.8*/
+    90% {opacity: 0.9;}/*过渡状态 透明度为0.9*/   	
+    100% {opacity: 1;}/*结束状态 透明度为1*/ 
+}  
+
+.mcname-animation-card-1 {    
+    animation: mcname-animation-card-1;/*动画名称*/  
+    animation-duration: 0.6s;/*动画持续时间*/  
+    -webkit-animation:mcname-animation-card-1 0.6s;/*针对webkit内核*/  
+}
+/* Card1动画动画结束 */
+
+/* Car2告动画 */
+@keyframes mcname-animation-card-2 {  
+    0% {opacity: 0;}/*初始状态 透明度为0*/  
+	10% {opacity: 0.1;}/*过渡状态 透明度为0.1*/ 
+    20% {opacity: 0.2;}/*过渡状态 透明度为0.2*/  
+	30% {opacity: 0.3;}/*过渡状态 透明度为0.3*/ 
+	40% {opacity: 0.4;}/*过渡状态 透明度为0.4*/
+    50% {opacity: 0.5;}/*过渡状态 透明度为0.5*/ 	
+	60% {opacity: 0.6;}/*过渡状态 透明度为0.6*/
+	70% {opacity: 0.7;}/*过渡状态 透明度为0.7*/ 
+    80% {opacity: 0.8;}/*过渡状态 透明度为0.8*/
+    90% {opacity: 0.9;}/*过渡状态 透明度为0.9*/   	
+    100% {opacity: 1;}/*结束状态 透明度为1*/ 
+}
+
+@-webkit-keyframes mcname-animation-card-2 {/*针对webkit内核*/  
+    0% {opacity: 0;}/*初始状态 透明度为0*/  
+	10% {opacity: 0.1;}/*过渡状态 透明度为0.1*/ 
+    20% {opacity: 0.2;}/*过渡状态 透明度为0.2*/  
+	30% {opacity: 0.3;}/*过渡状态 透明度为0.3*/ 
+	40% {opacity: 0.4;}/*过渡状态 透明度为0.4*/
+    50% {opacity: 0.5;}/*过渡状态 透明度为0.5*/ 	
+	60% {opacity: 0.6;}/*过渡状态 透明度为0.6*/
+	70% {opacity: 0.7;}/*过渡状态 透明度为0.7*/ 
+    80% {opacity: 0.8;}/*过渡状态 透明度为0.8*/
+    90% {opacity: 0.9;}/*过渡状态 透明度为0.9*/   	
+    100% {opacity: 1;}/*结束状态 透明度为1*/  
+}  
+
+.mcname-animation-card-2 {    
+    animation: mcname-animation-card-2;/*动画名称*/  
+    animation-duration: 0.8s;/*动画持续时间*/  
+    -webkit-animation:mcname-animation-card-2 0.8s;/*针对webkit内核*/  
+}
+/* Card2动画动画结束 */
+
+/* Car3告动画 */
+@keyframes mcname-animation-card-3 {  
+    0% {opacity: 0;}/*初始状态 透明度为0*/  
+	10% {opacity: 0.1;}/*过渡状态 透明度为0.1*/ 
+    20% {opacity: 0.2;}/*过渡状态 透明度为0.2*/  
+	30% {opacity: 0.3;}/*过渡状态 透明度为0.3*/ 
+	40% {opacity: 0.4;}/*过渡状态 透明度为0.4*/
+    50% {opacity: 0.5;}/*过渡状态 透明度为0.5*/ 	
+	60% {opacity: 0.6;}/*过渡状态 透明度为0.6*/
+	70% {opacity: 0.7;}/*过渡状态 透明度为0.7*/ 
+    80% {opacity: 0.8;}/*过渡状态 透明度为0.8*/
+    90% {opacity: 0.9;}/*过渡状态 透明度为0.9*/   	
+    100% {opacity: 1;}/*结束状态 透明度为1*/ 
+}
+
+@-webkit-keyframes mcname-animation-card-3 {/*针对webkit内核*/  
+    0% {opacity: 0;}/*初始状态 透明度为0*/  
+	10% {opacity: 0.1;}/*过渡状态 透明度为0.1*/ 
+    20% {opacity: 0.2;}/*过渡状态 透明度为0.2*/  
+	30% {opacity: 0.3;}/*过渡状态 透明度为0.3*/ 
+	40% {opacity: 0.4;}/*过渡状态 透明度为0.4*/
+    50% {opacity: 0.5;}/*过渡状态 透明度为0.5*/ 	
+	60% {opacity: 0.6;}/*过渡状态 透明度为0.6*/
+	70% {opacity: 0.7;}/*过渡状态 透明度为0.7*/ 
+    80% {opacity: 0.8;}/*过渡状态 透明度为0.8*/
+    90% {opacity: 0.9;}/*过渡状态 透明度为0.9*/   	
+    100% {opacity: 1;}/*结束状态 透明度为1*/   
+}  
+
+.mcname-animation-card-3 {    
+    animation: mcname-animation-card-3;/*动画名称*/  
+    animation-duration: 1s;/*动画持续时间*/  
+    -webkit-animation:mcname-animation-card-2 1s;/*针对webkit内核*/  
+}
+/* Card3动画动画结束 */
+
+/* Car4告动画 */
+@keyframes mcname-animation-card-4 {  
+    0% {opacity: 0;}/*初始状态 透明度为0*/  
+	10% {opacity: 0.1;}/*过渡状态 透明度为0.1*/ 
+    20% {opacity: 0.2;}/*过渡状态 透明度为0.2*/  
+	30% {opacity: 0.3;}/*过渡状态 透明度为0.3*/ 
+	40% {opacity: 0.4;}/*过渡状态 透明度为0.4*/
+    50% {opacity: 0.5;}/*过渡状态 透明度为0.5*/ 	
+	60% {opacity: 0.6;}/*过渡状态 透明度为0.6*/
+	70% {opacity: 0.7;}/*过渡状态 透明度为0.7*/ 
+    80% {opacity: 0.8;}/*过渡状态 透明度为0.8*/
+    90% {opacity: 0.9;}/*过渡状态 透明度为0.9*/   	
+    100% {opacity: 1;}/*结束状态 透明度为1*/  
+}
+
+@-webkit-keyframes mcname-animation-card-4 {/*针对webkit内核*/  
+    0% {opacity: 0;}/*初始状态 透明度为0*/  
+	10% {opacity: 0.1;}/*过渡状态 透明度为0.1*/ 
+    20% {opacity: 0.2;}/*过渡状态 透明度为0.2*/  
+	30% {opacity: 0.3;}/*过渡状态 透明度为0.3*/ 
+	40% {opacity: 0.4;}/*过渡状态 透明度为0.4*/
+    50% {opacity: 0.5;}/*过渡状态 透明度为0.5*/ 	
+	60% {opacity: 0.6;}/*过渡状态 透明度为0.6*/
+	70% {opacity: 0.7;}/*过渡状态 透明度为0.7*/ 
+    80% {opacity: 0.8;}/*过渡状态 透明度为0.8*/
+    90% {opacity: 0.9;}/*过渡状态 透明度为0.9*/   	
+    100% {opacity: 1;}/*结束状态 透明度为1*/  
+}  
+
+.mcname-animation-card-4 {    
+    animation: mcname-animation-card-4;/*动画名称*/  
+    animation-duration: 1.2s;/*动画持续时间*/  
+    -webkit-animation:mcname-animation-card-4 1.2s;/*针对webkit内核*/  
+}
+/* Card4动画动画结束 */
+
+/* Car5告动画 */
+@keyframes mcname-animation-card-5 {  
+    0% {opacity: 0;}/*初始状态 透明度为0*/  
+	10% {opacity: 0.1;}/*过渡状态 透明度为0.1*/ 
+    20% {opacity: 0.2;}/*过渡状态 透明度为0.2*/  
+	30% {opacity: 0.3;}/*过渡状态 透明度为0.3*/ 
+	40% {opacity: 0.4;}/*过渡状态 透明度为0.4*/
+    50% {opacity: 0.5;}/*过渡状态 透明度为0.5*/ 	
+	60% {opacity: 0.6;}/*过渡状态 透明度为0.6*/
+	70% {opacity: 0.7;}/*过渡状态 透明度为0.7*/ 
+    80% {opacity: 0.8;}/*过渡状态 透明度为0.8*/
+    90% {opacity: 0.9;}/*过渡状态 透明度为0.9*/   	
+    100% {opacity: 1;}/*结束状态 透明度为1*/  
+}
+
+@-webkit-keyframes mcname-animation-card-5 {/*针对webkit内核*/  
+    0% {opacity: 0;}/*初始状态 透明度为0*/  
+	10% {opacity: 0.1;}/*过渡状态 透明度为0.1*/ 
+    20% {opacity: 0.2;}/*过渡状态 透明度为0.2*/  
+	30% {opacity: 0.3;}/*过渡状态 透明度为0.3*/ 
+	40% {opacity: 0.4;}/*过渡状态 透明度为0.4*/
+    50% {opacity: 0.5;}/*过渡状态 透明度为0.5*/ 	
+	60% {opacity: 0.6;}/*过渡状态 透明度为0.6*/
+	70% {opacity: 0.7;}/*过渡状态 透明度为0.7*/ 
+    80% {opacity: 0.8;}/*过渡状态 透明度为0.8*/
+    90% {opacity: 0.9;}/*过渡状态 透明度为0.9*/   	
+    100% {opacity: 1;}/*结束状态 透明度为1*/  
+}  
+
+.mcname-animation-card-5 {    
+    animation: mcname-animation-card-5;/*动画名称*/  
+    animation-duration: 1.4s;/*动画持续时间*/  
+    -webkit-animation:mcname-animation-card-5 1.4s;/*针对webkit内核*/  
+}
+/* Card5动画动画结束 */
