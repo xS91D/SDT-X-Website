@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信件生成</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background-color: #34495e;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        h1, h2 {
+            text-align: center;
+            color: #e74c3c;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 4px;
+        }
+        input[type="checkbox"] {
+            margin-top: 10px;
+        }
+        button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #e74c3c;
+            color: #ecf0f1;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #c0392b;
+        }
+        #cmd-container {
+            margin-top: 20px;
+        }
+        .cmd {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #3d566e;
+            border-radius: 4px;
+        }
+        pre {
+            background-color: #1abc9c;
+            color: #2c3e50;
+            padding: 20px;
+            border-radius: 4px;
+            margin-top: 20px;
+            white-space: pre-wrap;
+        }
+    </style>
+    <script>
+        function addCmdField() {
+            const container = document.getElementById("cmd-container");
+            const cmdDiv = document.createElement("div");
+            cmdDiv.className = "cmd";
+            cmdDiv.innerHTML = `
+                <label for="cmd">指令:</label>
+                <input type="text" name="cmd" required>
+                <label for="name">名稱:</label>
+                <input type="text" name="name" required>
+            `;
+            container.appendChild(cmdDiv);
+        }
+
+        function generateYML() {
+            const playerId = document.getElementById("player-id").value;
+            const title = document.getElementById("title").value;
+            const content = document.getElementById("content").value;
+            const rewardButton = document.getElementById("reward-button").checked;
+
+            const cmds = document.getElementsByClassName("cmd");
+            let mailCmd = "";
+
+            for (let i = 0; i < cmds.length; i++) {
+                const cmd = cmds[i].querySelector('input[name="cmd"]').value;
+                const name = cmds[i].querySelector('input[name="name"]').value;
+                mailCmd += `
+  - cmd: ${cmd}
+    name: ${name}`;
+            }
+
+            const ymlData = `
+${playerId}:
+  - title: ${title}
+    content: "${content}"
+    mail-cmd:${mailCmd}
+    reward-button: ${rewardButton}
+    reward-got: false
+            `;
+
+            document.getElementById("output").textContent = ymlData.trim();
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>玩家信件生成器</h1>
+        <form onsubmit="event.preventDefault(); generateYML();">
+            <label for="player-id">玩家ID:</label>
+            <input type="text" id="player-id" name="player-id" required>
+            <label for="title">標題:</label>
+            <input type="text" id="title" name="title" required>
+            <label for="content">內容:</label>
+            <textarea id="content" name="content" required></textarea>
+            <label for="reward-button">獎勵按鈕:</label>
+            <input type="checkbox" id="reward-button" name="reward-button">
+            <div id="cmd-container">
+                <h2>指令</h2>
+                <button type="button" onclick="addCmdField()">添加指令</button>
+            </div>
+            <button type="submit">生成</button>
+        </form>
+        <pre id="output"></pre>
+    </div>
+</body>
+</html>
